@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviços</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #333, #666);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Para esconder a barra de rolagem */
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0; /* Inicia com opacidade 0 para o efeito de desvanecimento */
+            animation: fadeIn 1s ease forwards; /* Aplica a animação de desvanecimento */
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0; /* Inicia com opacidade 0 para o efeito de desvanecimento */
+            animation: fadeIn 1s ease forwards; /* Aplica a animação de desvanecimento */
+        }
+        .input-group {
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .input-group label {
+            font-weight: bold;
+        }
+        .input-group input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 60%;
+        }
+        .input-group input[type="date"] {
+            width: 100%;
+        }
+        .button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00FF00;
+            color: #000;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #00CC00;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px); /* Desloca o elemento para cima */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Retorna o elemento à sua posição original */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h2>Agendamento de Serviços</h2>
+    </div>
+    <div class="form">
+        <div class="input-group">
+            <label for="tipoServico">Tipo de Serviço:</label>
+            <input type="text" id="tipoServico">
+        </div>
+        <div class="input-group">
+            <label for="dataPrazo">Data do Prazo:</label>
+            <input type="date" id="dataPrazo">
+        </div>
+        <button class="button" id="agendarButton">Agendar Serviço</button>
+    </div>
+
+    <script>
+        document.getElementById("agendarButton").addEventListener("click", function() {
+            alert("Seu serviço foi agendado com sucesso!");
+        });
+    </script>
+</body>
+</html>
+

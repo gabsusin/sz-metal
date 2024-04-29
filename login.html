@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 1s ease forwards; /* Adiciona animação de fade-in */
+        }
+
+        /* Animação de fade-in para a página */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px; /* Adiciona espaçamento entre as letras */
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 400px;
+            opacity: 0; /* Inicia com opacidade 0 para a animação de fade-in */
+            animation: fadeInForm 1s ease forwards; /* Adiciona animação de fade-in para o formulário */
+        }
+
+        /* Animação de fade-in para o formulário */
+        @keyframes fadeInForm {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333; /* Cor de fundo para os campos de entrada */
+            color: #fff; /* Cor do texto */
+            transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave para a cor de fundo e texto */
+        }
+
+        .form-field:focus {
+            outline: none;
+            background-color: #555; /* Cor de fundo quando o campo está em foco */
+        }
+
+        .login-btn {
+            background-color: #0faf7f;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s; /* Adiciona transição suave para a cor de fundo do botão */
+        }
+
+        .login-btn:hover {
+            background-color: #0d9e67; /* Cor de fundo quando o mouse passa sobre o botão */
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 3px solid #0faf7f; /* Adiciona uma borda ao redor da imagem de perfil */
+            transition: border-color 0.3s; /* Adiciona transição suave para a cor da borda */
+        }
+
+        .profile-pic:hover {
+            border-color: #0d9e67; /* Cor da borda quando o mouse passa sobre a imagem de perfil */
+        }
+
+        .create-account {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .create-account a {
+            color: #00FF00;
+            text-decoration: none;
+            border-bottom: 1px solid #0faf7f;
+            transition: color 0.3s; /* Adiciona transição suave para a cor do texto */
+        }
+
+        .create-account a:hover {
+            color: #0d9e67; /* Cor do texto quando o mouse passa sobre o link */
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">SZ Metalúrgica</div> <!-- Adiciona o logo acima do formulário de login -->
+    <form class="login-form">
+        <input type="email" name="email" placeholder="Email" class="form-field" required>
+        <input type="password" name="password" placeholder="Senha" class="form-field" required>
+        <img class="profile-pic" src="profile-pic.jpg" alt="Foto de Perfil">
+        <button class="login-btn" onclick="window.location.href='infos.html'">Login</button>
+    </form>
+    <div class="create-account">
+        <a href="#">Criar conta</a>
+    </div>
+</body>
+</html>
+

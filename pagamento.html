@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamentos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #333, #666);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Para esconder a barra de rolagem */
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0; /* Inicia com opacidade 0 para o efeito de desvanecimento */
+            animation: fadeIn 1s ease forwards; /* Aplica a animação de desvanecimento */
+        }
+        .payment-info {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #222;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0; /* Inicia com opacidade 0 para o efeito de desvanecimento */
+            animation: fadeIn 1s ease forwards; /* Aplica a animação de desvanecimento */
+        }
+        .payment-info p {
+            margin-bottom: 10px;
+        }
+        .payment-info strong {
+            color: #00FF00; /* Cor verde para o valor em débito */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px); /* Desloca o elemento para cima */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Retorna o elemento à sua posição original */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h2>Pagamentos</h2>
+    </div>
+    <div class="payment-info">
+        <p>Você tem em débito:</p>
+        <p><strong>R$ 2345,00</strong></p>
+        <p>O pagamento deve ser feito através do PIX:</p>
+        <p><strong>54991171669</strong></p>
+        <p>Observação: O pagamento deve ser realizado em dinheiro ou PIX.</p>
+    </div>
+</body>
+</html>

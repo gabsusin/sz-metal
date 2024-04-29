@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta da Produção das Peças</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #333, #666);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Para esconder a barra de rolagem */
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0; /* Inicia com opacidade 0 para o efeito de desvanecimento */
+            animation: fadeIn 1s ease forwards; /* Aplica a animação de desvanecimento */
+        }
+        .piece-container {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #222;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0; /* Inicia com opacidade 0 para o efeito de desvanecimento */
+            animation: fadeIn 1s ease forwards; /* Aplica a animação de desvanecimento */
+        }
+        .piece-name {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .piece-status {
+            font-size: 18px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px); /* Desloca o elemento para cima */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Retorna o elemento à sua posição original */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h2>Consulta da Produção das Peças</h2>
+    </div>
+    <div class="piece-container">
+        <div class="piece-name">Peça 1</div>
+        <div class="piece-status">Situação: Pronta</div>
+    </div>
+</body>
+</html>
